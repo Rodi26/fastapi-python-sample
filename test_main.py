@@ -23,8 +23,7 @@ def test_create_task_with_invalid_input():
         "description": "Just some test task",
         "status": "In progress"
     }
-    response = \
-    client.post("/task", json=task)
+    response = client.post("/task", json=task)
     data = response.json()
 
     assert response.status_code != status.HTTP_200_OK
