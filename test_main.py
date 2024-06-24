@@ -1,11 +1,7 @@
 from fastapi import status
 from fastapi.testclient import TestClient
-
 from app.main import app
-
 client = TestClient(app)
-
-
 
 def test_create_task_with_valid_input():
     task = {
@@ -19,8 +15,7 @@ def test_create_task_with_valid_input():
 
     assert response.status_code == status.HTTP_200_OK
     assert 'title' in data and data['title'] == "Test task"
-
-
+    
 def test_create_task_with_invalid_input():
     task = {
         "slug": "test-task", 
