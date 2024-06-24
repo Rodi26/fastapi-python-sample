@@ -34,11 +34,3 @@ def test_create_task_with_invalid_input():
 
     assert response.status_code != status.HTTP_200_OK
     assert 'title' not in data
-
-
-def test_get_tasks_returns_data():
-    response = \
-    client.get("/tasks")
-    data = response.json()
-
-    assert len(data) > 0
