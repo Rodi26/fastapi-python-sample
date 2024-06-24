@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Rodi26_fastapi_python_sample_1719223530092-push-trigger-input-set
+  identifier: Build_Rodi26_fastapi_python_sample_1719223530092pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Rodi26_fastapi_python_sample_1719223530092
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
